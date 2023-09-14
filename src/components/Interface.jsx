@@ -9,9 +9,9 @@ export default function Interface() {
     const addItem = (data) => {
         const updatedTrainingData = [...trainingData];
 
-        if(updatedTrainingData.some(item => item.date === date.date)) {
+        if(updatedTrainingData.some(item => item.date === data.date)) {
             for (const item of updatedTrainingData){
-                if(item.date === date.date){
+                if(item.date === data.date){
                     item.distance = Number(item.distance) + Number(data.distance)
                 }
             }
